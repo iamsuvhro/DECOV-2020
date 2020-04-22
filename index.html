@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="theme-color" content="#ffffff"/>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="favicon.jpeg">
+    <link rel="icon" href="favicon.jpeg">
+    <link rel="manifest" href="/manifest.json">
+    <title>
+        Hackathon 2020
+    </title>
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/material-kit.css?v=2.0.2">
+    <!-- Documentation extras -->
+    <link href="assets/assets-custom/demo.css" rel="stylesheet" />
+    <link href="assets/assets-custom/css/image-grid.css" rel="stylesheet" />
+    <link href="assets/assets-custom/css/footer.css" rel="stylesheet" />
+    <link href="assets/assets-custom/css/termynal.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+
+        body{
+            overflow-x: hidden;
+        }
+
+        .card-profile {
+          max-width: 320px;
+          margin: 20px auto;
+          background-color: #fdfbf2;
+          border-radius: 5px;
+          border: 0;
+          box-shadow: 0.3em 0.3em 0.6em rgba(0, 0, 0, 0.2);
+          transition:0.4s ease;
+        }
+
+        .card-profile:hover
+        {
+            box-shadow: 0.6em 0.6em 1em rgba(0, 0, 0, 0.2);
+        }
+        .card-profile .card-img-top {
+          border-radius: 5px 5px 0 0;
+        }
+        .card-profile .card-img-profile {
+          max-width: 100%;
+          border-radius: 50%;
+          margin-top: -95px;
+          margin-bottom: 35px;
+          
+        }
+        .card-profile .card-title {
+          margin-bottom: 50px;
+        }
+        .card-profile .card-title small {
+          display: block;
+          font-size: .6em;
+          margin-top: .2em;
+        }
+        .card-profile .card-links {
+          margin-bottom: 25px;
+        }
+        .card-profile .card-links .fa {
+          margin: 0 1em;
+          font-size: 1.6em;
+        }
+        .card-profile .card-links .fa:focus, .card-profile .card-links .fa:hover {
+          text-decoration: none;
+        }
+        .card-profile .card-links .fa.fa-twitter {
+          color: #68aade;
+        }
+        .card-profile .card-links .fa.fa-twitter:hover {
+          color: #3e92d5;
+        }
+        .card-profile .card-links .fa.fa-facebook {
+          color: #3b5999;
+        }
+        .card-profile .card-links .fa.fa-facebook:hover {
+          color: #2d4474;
+        }
+
+        #top-button
+        {
+            font-size:20px;
+            transition: 0.3s ease;
+        }
+        #top-button:hover{
+            color:white;
+            background:rgb(0,101,202);
+        }
+        .tab { margin-left: 40px; }
+/*
+        .grid-item { width: 25%; }
+        .grid-item--width2 { width: 50%; }*/
+
+        </style>
+    <!-- iframe removal -->
+</head>
+<style>
+    .pos{
+        position:relative;  top:10px;
+
+    }
+</style>
+<body class="landing-page" name="top" id="top">
+    <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav" style="background-color: grey;" >
+        <div class="container">
+            <div class="navbar-translate">
+                <a href="#"><h3 style="font: sans-serif; font-size: 45px; color: grey; position:relative; right: 155px"><img src="img.jpeg" height="70" width="100">&nbsp;&nbsp;DECOV 2020</h3></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto pos">
+                    <li class="dropdown nav-item">
+                        <a href="#" data-page="index" class="nav-link">
+                            <span><b>Home</b></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#campus_ambassador" data-page="speakers" class="nav-link">
+                            <span><b id="header_text">Problem Statements</b></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./schedule" data-page="schedule" class="nav-link">
+                            <span><b id="header_text">About Us</b></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#rules" data-page="team" class="nav-link">
+                            <span><b id="header_text">Rules & Regulations</b></span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link">
+                             <span ><b id="header_text">Blog</b></span>
+                        </a>
+                    </li> -->
+                    <!--  <li class="nav-item">
+                        <a href="./about" data-page="about" class="nav-link">
+                             <span ><b id="header_text">About</b></span>
+                        </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a target="blank" class="nav-link" href="#">
+                            <span class="btn clr" id="joinbtn"><b id="header_text">Register your Team</b></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <style>
+        .clr{
+            background-color: grey;
+        }
+
+    </style>
+    <div class="page-header header-filter" data-parallax="true">
+        <div class="container" style="width: 100vw; padding: 0; margin: 0; max-width: 100vw;">
+            <div class="row" style="height: 100vh;">
+                <div class="col-md-4" id="hometop-container">
+                </div>
+                <div class="col-md-4">&nbsp;</div>
+                <div class="col-md-4" id="hometop-container">
+                    <img src="cdc.png" height="30%" width="30%"><br>
+                    <h1 class="event_title">DECOV 2020</h1>
+                    <p>Organize by</p>
+                    <h3 class="event_details">Code Tigers</h3>
+                    <h4 class="event_details">21 May</h4>
+                    <a target="_blank" id="buttons" class="btn btn-primary" href="#">Register your Team</a>
+                    <br />
+                </div>
+                <div class="col-md-8 psup" style=" background-image: url('bg-three.jpg'); background-position: bottom; background-size: 100% auto; background-repeat: no-repeat; position:relative;">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .clr{
+            background-color: grey;
+        }
+    </style>
+    <script>
+        $(function(){
+    var calcNewYear = setInterval(function(){
+        date_future = new Date(new Date().getFullYear() +1, 0, 1);
+        date_now = new Date();
+
+        seconds = Math.floor((date_future - (date_now))/1000);
+        minutes = Math.floor(seconds/60);
+        hours = Math.floor(minutes/60);
+        days = Math.floor(hours/24);
+        
+        hours = hours-(days*24);
+        minutes = minutes-(days*24*60)-(hours*60);
+        seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
+
+        $("#time").text("Time until new year:\nDays: " + days + " Hours: " + hours + " Minutes: " + minutes + " Seconds: " + seconds);
+    },1000);
+});
+</script>
+
+    <div class="main main-raised" style="margin-top: 0;">
+        <div class="container">
+            <div class="section text-center">
+                <div class="row">
+                    <div class="col-md-8 ml-auto mr-auto">
+
+                        <h2 class="title">&nbsp;&nbsp;DECOVE 2020</h2>
+
+                        <h5 class="description">intro</h5>
+                        <h4 class="description">Biggest Online Hackathon in 2020</h4>
+                    </div>
+                </div>
+                
+                    <!--/.First column-->
+                    <!--Second column-->
+                    
+                    <!--/.Second column-->
+                </div>
+                <!--/.First row-->
+                <div class="row mt-5 wow fadeIn" data-wow-delay="0.2s" style="text-align:left;">
+                    <!--First column-->
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.2s">
+                        <!--Card-->
+                        <img class="img-fluid" src="logo.JPG" width="55%" height="55%" />
+                        <!--/.Card-->
+                    </div>
+                    <!--/.First column-->
+                    <!--Second column-->
+                    <div class="col-lg-6">
+                        <!--Card-->
+                        <h2 class="title" id="internship_fair"><b>Get Involved</b></h2>
+                        <h3 class="event_title" style="color:rgb(150,150,150);">What is DECOVE ?</h3>
+                        <!--Card-->
+                        <h5 class="description">About</h5>
+                        <a href="#" class="btn btn-primary" id="buttons">Register</a>
+                    </div>
+                    <!--/.Second column-->
+                </div>
+                <!--/.First row-->
+                <p>&nbsp;</p>
+                <div class="row mt-5 wow fadeIn" data-wow-delay="0.2s">
+                    <div class="col-lg-6" style="text-align:left;">
+                        <h2 class="title" id="campus_ambassador"><b>Problem Statements</b></h2>
+                        <p>&nbsp;</p>
+                    </div>
+
+                                <style>
+                    table {
+                      font-family: arial, sans-serif;
+                      border-collapse: collapse;
+                      width: 100%;
+                    }
+
+                    td, th {
+                      border: 1px solid #dddddd;
+                      text-align: left;
+                      padding: 8px;
+                    }
+
+                    tr:nth-child(even) {
+                      background-color: #dddddd;
+                    }
+                    </style>
+                    <h4><img src="p1.png" height="75%" width="15%"><br>&nbsp;&nbsp;&nbsp;Health Care</h4>
+                    <table>
+                      <tr>
+                        <th>Problem Code</th>
+                        <th>Problem Statement</th>
+                        <th>Brief Problem Statement</th>
+                      </tr>
+                      <tr>
+                        <td>CT101</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Details</td>
+                      </tr>
+                      <tr>
+                        <td>Centro comercial Moctezuma</td>
+                        <td>Francisco Chang</td>
+                      </tr>
+                 </table>
+                    <!-- </div> -->
+                </div>
+                <!--/.First row-->
+                <p>&nbsp;</p>
+                <div class="row mt-5 wow fadeIn" data-wow-delay="0.2s" id="rules">
+                    <!--First column-->
+                    <div class="col-lg-6" style="text-align:left;">
+                        <h2 class="title" id="campus_ambassador"><b>Rules & Regulations</b></h2>
+                        <!--Card-->
+                        <ul>
+                            <li><h3 class="description" id="campus_ambassador">Team members should be at least 3 and max 5.</h3></li>
+                            <li><h3 class="description" id="campus_ambassador">Teams should describe what they’ve made and that should be audible not necessary person in on screen.</h3></li>
+                            <li><h3 class="description" id="campus_ambassador"> Only UG and PG Students can join.</h3></li>
+                        </ul>
+                    </div>
+                    <!--/.First column-->
+                    <!--Second column-->
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.2s">
+                        <!--Card-->
+                        <img class="img-fluid" src="rules.png" width="95%" height="95%" />
+                        <!--/.Card-->
+                    </div>
+                    <!--/.Second column-->
+                </div>
+                <!--/.First row-->
+                <div class="image-grid">
+                      <center><div class="row"><div class="col-lg-6" style="text-align:left;"><h2 class="title" id="campus_ambassador"><b>ROUNDS</b></h2><br/></div></div></center>
+                        
+                        
+                    <div class="row">
+                            <h3>First Round ( 1st may to 23rd may ) :</h3>
+                            <h4>
+                                 Registration of teams they can select at most 3 statements . . send ppts.
+                                Selection will be based on their ideas and ppts .
+                                24th may - 25th may : selected teams will get notified through mail.
+                            </h4>
+
+                            <h3>Second Round ( 27th may 10.00 pm - 29 th may 10 p.m) (Online) :</h3>
+                            <h4>
+                                <ul>
+                                    <li><h4>27th may - keynote speakers ( 8 p.m - 10 p.m)</h4></li>
+                                    <li><h4>After completing their apps teams need to create a video what they made
+                                    upload it to youtube that should be public and teams will upload their code
+                                    to github.</h4></li>
+                                </ul>
+                            </h4>
+
+                </div>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <br><br>
+        <a href="#top" id="top-button" style="color:rgb(0,101,202); background:white;">
+                <i class="material-icons" style="color:rgb(0,101,202); background:white; font-size: 30px;">
+                        keyboard_arrow_up
+                        </i>
+        </a>
+        <div class="container" style="padding-top: 20px;">
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="share-social share">
+                        <span><b>SHARE</b>
+                            <a href="https://facebook.com/sharer/sharer.php" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a>&nbsp;</a>
+                            <a href="#"
+                                target="_blank"><i class="fa fa-twitter"></i></a>
+                        </span>
+                    </div><br>
+                </div>
+                <div class="col-lg-3">
+                    <div class="share-social">
+                        <span><b>FOLLOW US</b><a>&nbsp;</a>
+                            <a href="https://www.facebook.com/TIGCodeTigers/" target="_blank"><i class="fa fa-facebook"></i></a><a>&nbsp;</a>
+                            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a><a>&nbsp;</a>
+                            <a href="https://www.linkedin.com/company/code-tigers/" target="_blank"><i class="fa fa-linkedin"
+                                    aria-hidden="true"></i></a><a>&nbsp;</a>
+                        </span>
+                    </div>
+                </div><br>
+                <div class="col-lg-3">
+                    <div class="share-social">
+                        <span><a href="mailto:code.tigers.innovation@gmail.com"><b>EMAIL US</b></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 footer-details">
+                    <span><b>ABOUT</b></span>
+                    <p>
+                        <a href="#" target="_blank">Code Tigers</a><br />
+                        <a href="https://twitter.com/hashtag/Decove2020" target="_blank"><b>#Decove2020</b></a> &nbsp;
+                        <a href="https://twitter.com/hashtag/Codetigers2020" target="_blank"><b>#Codetigers2020</b></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="container" style="padding-bottom: 20px;">
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="img.jpeg" height="75%" width="75%" alt="codetiger-logo"  />
+                </div>
+                <div class="col-lg-9 copyright" style="font-family: 'Open Sans', sans-serif;">
+                    &copy; Copyright 2020 | Team Code Tigers <span class="hide-bar"> | </span><a id="dev-credits" href="#" data-toggle="modal" onclick="var term = new Termynal('#termynal', {lineDelay: 750}); $('#myModal').css('padding-right', '0px !important');" data-target="#myModal">Developers Credits</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog" style="margin: 0 !important; width: calc(100vw + 15px) !important;">
+  <div class="modal-dialog" style="margin: 0 !important; max-width: calc(100vw + 15px) !important; height: 100vh !important;">
+    <!-- Modal content-->
+    <div class="modal-content" style="height: 100vh !important">
+      <div class="modal-body">
+        <div id="termynal" data-ty-startDelay="600" style="height: 83vh;">
+            <span data-ty="input">credits-roll</span>
+            <span data-ty>Credits</span>
+            <span data-ty>Developers: </span>
+            <span data-ty class="termynal-tab">[1] <a href="https://github.com/suvhradipghosh07" target="_blank">Suvhradip Ghosh</a></span>
+            <span data-ty>Designer: </span>
+            <span data-ty class="termynal-tab">[1] <a href="#" target="_blank">Sayan Mondal</a></span>
+            <span data-ty>Special Thanks to: </span>
+            <span data-ty class="termynal-tab">[1] <a href="#" target="_blank">GDG Kolkata</a></span>
+            <span data-ty class="termynal-dash-divider">---------------------------------------------------</span>
+            <span data-ty="input" style="word-break: break-all;">Fork us on: https://github.com/suvhradipghosh07</span>
+            <span data-ty class="termynal-dash-divider">---------------------------------------------------</span>
+            <span data-ty="input">Are you ready to decode</span>
+            </span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" style="background:rgb(0,101,202);">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    <script>
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker
+                   .register('/sw.js')
+                   .then(function() { console.log("Service Worker Registered"); });
+        }
+        </script>
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/bootstrap-material-design.js"></script>
+    <!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
+    <script src="assets/js/material-kit.js?v=2.0.2"></script>
+    <script src="assets/assets-custom/js/material-kit-demo.js"></script>
+    <!-- <script src="assets/assets-custom/js/GridHorizontal.js"></script> -->
+    <!-- <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
+    <script src="assets/assets-custom/main.js"></script>
+    <script src="assets/assets-custom/termynal.min.js"></script>
+    <script src="assets/assets-custom/index.js"></script>
+</body>
+
+</html>
